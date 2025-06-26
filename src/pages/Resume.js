@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
+import resumePDF from "../assets/resume.pdf";
 import "../styles/Resume.css";
 
-// Set up PDF.js worker
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   "pdfjs-dist/build/pdf.worker.mjs",
   import.meta.url
@@ -19,15 +19,12 @@ const Resume = () => {
     <div className="resume-container">
       <h1 className="resume-title">My Resume</h1>
 
-      <a href="/resume.pdf" download="Shaun_Richter_Resume.pdf">
+      <a href={resumePDF} download="Shaun_Richter_Resume.pdf">
         <button className="download-button">Download Resume</button>
       </a>
 
       <div className="pdf-viewer">
-        <Document
-          file="/resume.pdf"
-          onLoadSuccess={onDocumentLoadSuccess}
-        >
+        <Document file={resumePDF} onLoadSuccess={onDocumentLoadSuccess}>
           {Array.from(new Array(numPages), (_, index) => (
             <Page
               key={`page_${index + 1}`}
