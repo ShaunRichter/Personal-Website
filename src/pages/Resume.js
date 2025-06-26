@@ -1,15 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
+import { Document, Page, pdfjs } from "react-pdf";
+import "../styles/Resume.css";
+
+// Set up PDF.js worker
+pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+  "pdfjs-dist/build/pdf.worker.mjs",
+  import.meta.url
+).toString();
 
 const Resume = () => {
+  const [numPages, setNumPages] = useState(null);
+
+  const onDocumentLoadSuccess = ({ numPages }) => {
+    setNumPages(numPages);
+  };
+
   return (
-    <div>
-      <h1>My Resume</h1>
-      <p>
-        Download my full resume:
-        <a href="/resume.pdf" download="Shaun_Richter_Resume.pdf">
-          <button style={{ marginLeft: "10px" }}>Download Resume</button>
-        </a>
-      </p>
+    <div className="resume-container">
+      <h1 className="resume-title">My Resume</h1>
+
+      <a href="/resume.pdf" download="Shaun_Richter_Resume.pdf">
+        <button className="download-button">Download Resume</button>
+      </a>
+
+      <div className="pdf-viewer">
+        <Document
+          file="/resume.pdf"
+          onLoadSuccess={onDocumentLoadSuccess}
+          loading="Loading PDF..."
+        >
+          {Array.from(new Array(numPages), (_, index) => (
+            <Page
+              key={`page_${index + 1}`}
+              pageNumber={index + 1}
+              renderTextLayer={false}
+              renderAnnotationLayer={false}
+              scale={1.7}
+            />
+          ))}
+        </Document>
+      </div>
     </div>
   );
 };

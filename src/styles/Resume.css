@@ -1,0 +1,51 @@
+.resume-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+  background: transparent;
+  box-shadow: none;
+  text-align: center;
+}
+
+.resume-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #222;
+  margin-top: 0px;
+  margin-bottom: 30px;
+}
+
+
+.download-button {
+  background-color: #0069d9;
+  border: none;
+  padding: 14px 28px;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-bottom: 40px;
+}
+
+.download-button:hover {
+  background-color: #0053ad;
+  transform: translateY(-2px);
+}
+
+.pdf-viewer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.react-pdf__Page__canvas {
+  width: auto !important;
+  height: auto !important;
+  max-width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+}
