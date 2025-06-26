@@ -27,7 +27,6 @@ const Resume = () => {
         <Document
           file="/resume.pdf"
           onLoadSuccess={onDocumentLoadSuccess}
-          loading="Loading PDF..."
         >
           {Array.from(new Array(numPages), (_, index) => (
             <Page
