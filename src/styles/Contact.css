@@ -1,0 +1,38 @@
+.contact-container {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.icon-row {
+  margin-bottom: 30px;
+}
+
+.contact-icon {
+  font-size: 48px;
+  margin: 20px;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.contact-icon.linkedin {
+  color: #0077b5;
+}
+
+.contact-icon.github {
+  color: #171515;
+}
+
+.contact-icon:hover {
+  transform: scale(1.2);
+}
+
+.contact-details {
+  font-size: 1.1rem;
+  line-height: 2;
+}
+
+.detail-icon {
+  margin-right: 8px;
+  color: #333;
+  vertical-align: middle;
+}
