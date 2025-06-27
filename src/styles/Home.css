@@ -1,0 +1,105 @@
+/* ---------------- SECTION ------------------------------------------------ */
+.home-section {
+  min-height: 100vh;
+  background: #0a192f;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 5vw;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* ---------------- GRID CONTAINER ---------------------------------------- */
+.home-content {
+  display: grid;
+  grid-template-columns: 3fr 2fr; /* 3/5 left (text), 2/5 right (image) */
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+  align-items: center;
+}
+
+/* ---------------- LEFT CONTENT ------------------------------------------ */
+.home-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0; /* Prevent overflow */
+}
+
+.greeting {
+  font-size: 3.5rem;
+  margin: 0;
+  white-space: normal;
+}
+
+.name-heading {
+  font-size: 4.5rem;
+  margin: 10px 0 0;
+  white-space: normal;
+}
+
+.typewriter {
+  margin-top: 20px;
+  font-size: 2.2rem;
+  white-space: normal;
+}
+
+/* ---------------- RIGHT CONTENT ----------------------------------------- */
+.home-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.home-image img {
+  max-height: 600px;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ---------------- ACCENTS & ANIMATIONS ---------------------------------- */
+.main-name {
+  color: #64ffda;
+}
+
+.wave {
+  display: inline-block;
+  animation: wave-animation 2.5s infinite;
+  transform-origin: 70% 70%;
+}
+
+@keyframes wave-animation {
+  0% { transform: rotate(0deg); }
+  15% { transform: rotate(14deg); }
+  30% { transform: rotate(-8deg); }
+  40% { transform: rotate(14deg); }
+  50% { transform: rotate(-4deg); }
+  60% { transform: rotate(10deg); }
+  70% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* ---------------- RESPONSIVE STACKING ----------------------------------- */
+@media (max-width: 768px) {
+  .home-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .home-left {
+    align-items: center;
+  }
+
+  .home-image {
+    margin-top: 30px;
+  }
+
+  .home-image img {
+    max-height: 400px;
+  }
+}
