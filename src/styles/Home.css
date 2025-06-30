@@ -3,49 +3,75 @@
 }
 
 .home-section {
-  position: relative;
-  z-index: 1;
   background: linear-gradient(
-      to bottom left,
-      rgba(17, 16, 16, 0.678),
-      rgba(12, 10, 22, 0.863)
-    );
-  background-position: top center;
-  background-repeat: no-repeat;
+    to bottom left,
+    rgba(17, 16, 16, 0.678),
+    rgba(12, 10, 22, 0.863)
+  );
   background-size: cover;
-  padding-top: 30px;
-  padding-bottom: 30px;
   min-height: 100vh;
   color: whitesmoke;
+  display: flex;
+  align-items: center;
 }
 
 .home-content {
-  padding: 9rem 2rem 2rem;
-  text-align: left;
+  width: 100%;
+  padding: 80px 2rem 60px;
 }
 
-.home-header {
-  padding-top: 80px;
+.home-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
 }
 
 .greeting {
   font-size: 2.4em;
-  padding-left: 50px;
+  margin-bottom: 0.5rem;
 }
 
 .name-heading {
   font-size: 2.8em;
-  padding-left: 45px;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
 }
 
 .main-name {
   color: var(--primary-color);
   font-weight: bold;
+  margin-right: 10px;
+}
+
+.home-social-links-inline {
+  display: inline-flex;
+  gap: 15px;
+  vertical-align: middle;
+}
+
+.social-icon {
+  font-size: 1.8rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+  color: #ccc;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+
+.linkedin:hover {
+  color: #0e76a8;
+}
+
+.github:hover {
+  color: #333;
 }
 
 .typewriter {
-  padding: 50px;
-  padding-left: 45px;
   font-size: 1.8em;
   font-weight: 500;
   color: #be6adf;
@@ -53,7 +79,6 @@
 
 .home-image {
   text-align: center;
-  padding-bottom: 20px;
 }
 
 .home-image img {
@@ -88,19 +113,28 @@
     text-align: center;
   }
 
+  .home-left {
+    align-items: center;
+  }
+
   .greeting,
   .name-heading,
   .typewriter {
-    padding-left: 0;
     text-align: center;
   }
 
   .typewriter {
-    padding: 20px 0;
     font-size: 1.4em;
   }
 
   .home-image img {
     max-height: 300px;
+  }
+
+  .home-social-links-inline {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    width: 100%;
   }
 }
