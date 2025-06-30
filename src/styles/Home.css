@@ -1,105 +1,106 @@
-/* ---------------- SECTION ------------------------------------------------ */
+:root {
+  --primary-color: #cd5ff8;
+}
+
 .home-section {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(
+      to bottom left,
+      rgba(17, 16, 16, 0.678),
+      rgba(12, 10, 22, 0.863)
+    );
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 30px;
+  padding-bottom: 30px;
   min-height: 100vh;
-  background: #0a192f;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 60px 5vw;
-  overflow-x: hidden; /* Prevent horizontal scroll */
+  color: whitesmoke;
 }
 
-/* ---------------- GRID CONTAINER ---------------------------------------- */
 .home-content {
-  display: grid;
-  grid-template-columns: 3fr 2fr; /* 3/5 left (text), 2/5 right (image) */
-  gap: 40px;
-  width: 100%;
-  max-width: 1200px;
-  align-items: center;
+  padding: 9rem 2rem 2rem;
+  text-align: left;
 }
 
-/* ---------------- LEFT CONTENT ------------------------------------------ */
-.home-left {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-width: 0; /* Prevent overflow */
+.home-header {
+  padding-top: 80px;
 }
 
 .greeting {
-  font-size: 3.5rem;
-  margin: 0;
-  white-space: normal;
+  font-size: 2.4em;
+  padding-left: 50px;
 }
 
 .name-heading {
-  font-size: 4.5rem;
-  margin: 10px 0 0;
-  white-space: normal;
+  font-size: 2.8em;
+  padding-left: 45px;
+}
+
+.main-name {
+  color: var(--primary-color);
+  font-weight: bold;
 }
 
 .typewriter {
-  margin-top: 20px;
-  font-size: 2.2rem;
-  white-space: normal;
+  padding: 50px;
+  padding-left: 45px;
+  font-size: 1.8em;
+  font-weight: 500;
+  color: #be6adf;
 }
 
-/* ---------------- RIGHT CONTENT ----------------------------------------- */
 .home-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+  text-align: center;
+  padding-bottom: 20px;
 }
 
 .home-image img {
-  max-height: 600px;
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
+  max-height: 450px;
+  width: auto;
 }
 
-/* ---------------- ACCENTS & ANIMATIONS ---------------------------------- */
-.main-name {
-  color: #64ffda;
-}
-
+/* Wave animation */
 .wave {
-  display: inline-block;
-  animation: wave-animation 2.5s infinite;
+  animation-name: wave-animation;
+  animation-duration: 2.1s;
+  animation-iteration-count: infinite;
   transform-origin: 70% 70%;
+  display: inline-block;
 }
 
 @keyframes wave-animation {
   0% { transform: rotate(0deg); }
-  15% { transform: rotate(14deg); }
-  30% { transform: rotate(-8deg); }
-  40% { transform: rotate(14deg); }
-  50% { transform: rotate(-4deg); }
-  60% { transform: rotate(10deg); }
-  70% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
   100% { transform: rotate(0deg); }
 }
 
-/* ---------------- RESPONSIVE STACKING ----------------------------------- */
+/* Mobile responsiveness */
 @media (max-width: 768px) {
   .home-content {
-    grid-template-columns: 1fr;
+    padding: 4rem 1rem;
     text-align: center;
   }
 
-  .home-left {
-    align-items: center;
+  .greeting,
+  .name-heading,
+  .typewriter {
+    padding-left: 0;
+    text-align: center;
   }
 
-  .home-image {
-    margin-top: 30px;
+  .typewriter {
+    padding: 20px 0;
+    font-size: 1.4em;
   }
 
   .home-image img {
-    max-height: 400px;
+    max-height: 300px;
   }
 }

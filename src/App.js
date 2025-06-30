@@ -6,6 +6,7 @@ import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Resume from "./pages/Resume";
 import Contact from "./pages/Contact";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
   return (
