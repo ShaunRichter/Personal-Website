@@ -1,56 +1,45 @@
 import React from "react";
+import selfPortrait from "../assets/self-portrait.jpg";
 import "../styles/About.css";
 
 const About = () => {
   return (
-    <div className="about-container">
-      <div className="about-header">
-        <h1 className="about-title">About Me</h1>
-        <p className="about-subtitle">
-          Passionate about building innovative software solutions and pushing the boundaries of technology.
-        </p>
-      </div>
-
+    <section className="about-section" id="about">
       <div className="about-content">
-        <div className="about-card">
-          <h2 className="section-title">Professional Summary</h2>
-          <p className="about-text">
-            Hi, I'm <strong>Shaun Richter</strong>, a Software Engineer with a B.S.E. in Computer Science & Engineering from the <strong>University of Iowa</strong>, graduating in December 2024. 
-            Currently, I'm pursuing a Master's in Computer and Electrical Engineering, with an expected completion in December 2025.
-          </p>
-        </div>
+        <h1 className="about-heading">A Little About Me</h1>
 
-        <div className="about-card">
-          <h2 className="section-title">Professional Experience</h2>
-          <ul className="about-list">
-            <li className="experience-item">
-              <strong>Software Engineering Intern – Collins Aerospace</strong> <span className="date">(2023 - Present)</span>
-              <p>
-                - Developed **high-reliability embedded software** for aviation communication.<br />
-                - Worked in an **agile environment**, collaborating with cross-functional teams.<br />
-                - Mentored new interns and engineers in software best practices.
-              </p>
-            </li>
-            <li className="experience-item">
-              <strong>Teaching Assistant – University of Iowa</strong> <span className="date">(2022 - 2023)</span>
-              <p>
-                - Assisted in teaching **advanced C++ programming** and object-oriented principles.<br />
-                - Conducted **office hours, graded assignments**, and provided hands-on student guidance.
-              </p>
-            </li>
-          </ul>
-        </div>
+        <div className="about-grid">
+          {/* LEFT: Portrait */}
+          <div className="about-image">
+            <img
+              src={selfPortrait}
+              alt="Shaun Richter"
+              className="portrait-img"
+            />
+          </div>
 
-        <div className="about-card">
-          <h2 className="section-title">Extracurricular Activities</h2>
-          <ul className="about-list">
-            <li><strong>Association for Computing Machinery (ACM)</strong> – Active Member (2022 - Present)</li>
-            <li><strong>American Wind Energy Association (AWEA)</strong> – Lead of Software Team (2022 - 2023)</li>
-            <li><strong>University of Iowa Intramurals</strong> – Competed in **Basketball, Pickleball, Soccer** (2021 - Present)</li>
-          </ul>
+          {/* RIGHT: Description */}
+          <div className="about-text">
+            <p>
+              Hi, I'm Shaun! I was born and raised in Temecula, California, and now I'm living in Iowa City.
+              I earned my Bachelor's degree in Computer Science and Engineering with Honors and Highest Distinction
+              from the University of Iowa, and I'm currently pursuing my Master's in Electrical and Computer Engineering,
+              with a focus on Software Engineering.
+            </p>
+            <p>
+              I'm also working as a Software Engineer at Collins Aerospace, where I contribute to developing real-time
+              communication systems for aviation. I'm experienced in the fields of Software Engineering, Machine Learning,
+              and Human-Machine Interaction. Whether it's developing real-time software, exploring AI models, or refining
+              user interfaces, I'm always eager to dive into projects that blend innovation with impact.
+            </p>
+            <p>
+              Outside of engineering, I enjoy playing and watching sports like football, soccer, pickleball, and volleyball,
+              spending time with friends, and watching movies.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
