@@ -33,7 +33,7 @@
 
 .portrait-img {
   width: 100%;
-  max-width: 500px;
+  max-width: 550px;
   height: auto;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -48,6 +48,49 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
+.skills-heading {
+  text-align: center;
+  font-size: 2.4em;
+  margin: 60px 0 30px;
+  color: var(--primary-color);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
+
+.skill-tile {
+  background-color: var(--card-bg);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.skill-tile:hover {
+  transform: scale(1.1);
+}
+
+.skill-tile i {
+  font-size: 3rem;
+}
+
+.custom-icon {
+  width: 48px;
+  height: 48px;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .about-grid {
     grid-template-columns: 1fr;
@@ -67,4 +110,35 @@
   .about-heading {
     font-size: 2.2em;
   }
+
+  .skills-heading {
+    font-size: 2em;
+  }
+}
+
+.skill-tile {
+  position: relative;
+  cursor: pointer;
+}
+
+.skill-tile::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 10;
+}
+
+.skill-tile:hover::after {
+  opacity: 1;
 }
