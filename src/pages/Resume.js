@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
 import resumePDF from "../assets/resume.pdf";
 import "../styles/Resume.css";
+import { useNavigate } from "react-router-dom";
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   "pdfjs-dist/build/pdf.worker.mjs",
@@ -10,6 +11,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 
 const Resume = () => {
   const [numPages, setNumPages] = useState(null);
+  const navigate = useNavigate();
 
   const onDocumentLoadSuccess = ({ numPages }) => {
     setNumPages(numPages);
@@ -18,6 +20,10 @@ const Resume = () => {
   return (
     <div className="resume-container">
       <h1 className="resume-title">My Resume</h1>
+
+      <button className="back-button" onClick={() => navigate(-1)}>
+        ← Back
+      </button>
 
       <a href={resumePDF} download="Shaun_Richter_Resume.pdf">
         <button className="download-button">Download Resume</button>

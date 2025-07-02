@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
-import Contact from "./pages/Contact";
+import Footer from "./pages/Footer";
 import Resume from "./pages/Resume"; // Import your resume page
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
@@ -22,7 +22,7 @@ const App = () => {
               <div id="home"><Home /></div>
               <div id="about"><About /></div>
               <div id="projects"><Projects /></div>
-              <div id="contact"><Contact /></div>
+              <div id="footer"><Footer /></div>
             </>
           }
         />
