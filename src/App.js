@@ -20,8 +20,11 @@ const App = () => {
           element={
             <>
               <div id="home"><Home /></div>
+              <div className="section-divider"></div>
               <div id="about"><About /></div>
+              <div className="section-divider"></div>
               <div id="projects"><Projects /></div>
+              <div className="section-divider-bottom"></div>
               <div id="footer"><Footer /></div>
             </>
           }

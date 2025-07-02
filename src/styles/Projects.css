@@ -1,5 +1,5 @@
 .project-section {
-  background: linear-gradient(to bottom left, #0f0c29, #302b63, #24243e);
+  .project-section {background: var(--bg-gradient);}
   padding: 100px 0;
   color: white;
   min-height: 100vh;
