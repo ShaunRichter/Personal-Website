@@ -4,6 +4,7 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 import gmailIcon from "../assets/gmail.svg";
 import resumeIcon from "../assets/resume.svg";
 import "../styles/Contact.css";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
   return (
@@ -46,7 +47,9 @@ const Contact = () => {
 
           <Col md={6} className="resume-right">
             <h1 className="contact-heading">Resume</h1>
-            <img src={resumeIcon} alt="Resume Icon" className="resume-svg" />
+            <Link to="/resume" className="resume-link" aria-label="Resume">
+              <img src={resumeIcon} alt="Resume Icon" className="resume-svg" />
+            </Link>
           </Col>
         </Row>
       </Container>
