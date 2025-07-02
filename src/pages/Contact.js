@@ -1,47 +1,53 @@
 import React from "react";
-import { FaLinkedin, FaGithub, FaEnvelope, FaPhone } from "react-icons/fa";
+import { Container, Row, Col } from "react-bootstrap";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import gmailIcon from "../assets/gmail.svg";
 import "../styles/Contact.css";
 
 const Contact = () => {
   return (
-    <div className="contact-container">
-      <h1>Contact Me</h1>
-      <div className="icon-row">
-        <a
-          href="https://www.linkedin.com/in/shaun-richter-a90b412b6/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <FaLinkedin className="contact-icon linkedin" />
-        </a>
+    <section className="contact-section" id="contact">
+      <Container className="contact-container text-center">
+        <h1 className="contact-heading">Contact Me</h1>
 
-        <a
-          href="https://github.com/ShaunRichter"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <FaGithub className="contact-icon github" />
-        </a>
-      </div>
-      <div className="contact-details">
-        <p>
-          <FaEnvelope className="detail-icon" />{" "}
-          <a href="mailto:shaunrichter547@gmail.com">
-            shaunrichter547@gmail.com
-          </a>
-        </p>
-        <p>
-          <FaEnvelope className="detail-icon" />{" "}
-          <a href="mailto:shaun-richter@uiowa.edu">
-            shaun-richter@uiowa.edu
-          </a>
-        </p>
-        <p>
-          <FaPhone className="detail-icon" />{" "}
-          <a href="tel:9513068200">(951) 306-8200</a>
-        </p>
-      </div>
-    </div>
+        <Row className="justify-content-center contact-icon-row">
+          <Col xs="auto">
+            <a
+              href="https://www.linkedin.com/in/shaun-richter-a90b412b6/"
+              target="_blank"
+              rel="noreferrer"
+              className="contact-icon linkedin"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedin />
+            </a>
+          </Col>
+          <Col xs="auto">
+            <a
+              href="https://github.com/ShaunRichter"
+              target="_blank"
+              rel="noreferrer"
+              className="contact-icon github"
+              aria-label="GitHub"
+            >
+              <FaGithub />
+            </a>
+          </Col>
+          <Col xs="auto">
+            <a
+              href="mailto:shaunrichter547@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+              className="gmail-link with-tooltip"
+              aria-label="Gmail"
+            >
+              <img src={gmailIcon} alt="Gmail" className="gmail-icon" />
+              <span className="tooltip-text">shaunrichter547@gmail.com</span>
+            </a>
+          </Col>
+        </Row>
+      </Container>
+    </section>
   );
 };
 

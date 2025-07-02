@@ -1,38 +1,107 @@
-.contact-container {
+.contact-section {
+  background-color: #0f172a;
+  color: #f1f5f9;
+  padding: 80px 0;
   text-align: center;
-  margin-top: 40px;
 }
 
-.icon-row {
-  margin-bottom: 30px;
+.contact-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.contact-heading {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.contact-icon-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
 .contact-icon {
-  font-size: 48px;
-  margin: 20px;
-  transition: transform 0.2s ease;
+  font-size: 2.8rem;
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, color 0.3s ease;
   cursor: pointer;
 }
 
 .contact-icon.linkedin {
-  color: #0077b5;
+  color: #0a66c2;
 }
 
 .contact-icon.github {
-  color: #171515;
+  color: #f8fafc;
 }
 
 .contact-icon:hover {
   transform: scale(1.2);
+  color: var(--primary-color);
 }
 
-.contact-details {
-  font-size: 1.1rem;
-  line-height: 2;
+.gmail-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
-.detail-icon {
-  margin-right: 8px;
-  color: #333;
-  vertical-align: middle;
+.gmail-icon {
+  width: 42px;
+  height: 42px;
+  transition: transform 0.3s ease;
+}
+
+.gmail-link:hover .gmail-icon {
+  transform: scale(1.2);
+}
+
+.tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  background-color: #334155;
+  color: #f1f5f9;
+  text-align: center;
+  border-radius: 6px;
+  padding: 6px 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity 0.3s ease;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.with-tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (max-width: 576px) {
+  .contact-heading {
+    font-size: 2.2rem;
+  }
+
+  .contact-icon,
+  .gmail-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .tooltip-text {
+    font-size: 0.8rem;
+  }
 }
