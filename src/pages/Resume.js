@@ -21,7 +21,7 @@ const Resume = () => {
     <div className="resume-container">
       <h1 className="resume-title">My Resume</h1>
 
-      <button className="back-button" onClick={() => navigate(-1)}>
+      <button className="back-button" onClick={() => navigate("/")}>
         ← Back
       </button>
 
