@@ -1,32 +1,40 @@
+.resume-section {
+  background: var(--bg-gradient);
+  min-height: 100vh;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 2rem 60px;
+}
+
 .resume-container {
+  width: 100%;
   max-width: 960px;
-  margin: 0 auto;
-  padding: 20px;
-  background: transparent;
-  box-shadow: none;
   text-align: center;
 }
 
 .resume-title {
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: #b61c1c;
-  margin-top: 0px;
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: var(--text-color); /* ✅ neutral text color */
   margin-bottom: 30px;
 }
 
-
 .download-button {
-  background-color: #0069d9;
+  background-color: #0069d9; /* ✅ Bootstrap primary blue */
   border: none;
-  padding: 14px 28px;
+  padding: 12px 24px;
   color: white;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 500;
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
   margin-bottom: 40px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .download-button:hover {
@@ -38,32 +46,27 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
-  margin-bottom: 40px;
+  gap: 32px;
+  scroll-snap-type: y mandatory;
 }
 
 .react-pdf__Page__canvas {
   width: auto !important;
   height: auto !important;
   max-width: 100%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  border-radius: 4px;
+  scroll-snap-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
 }
 
-.back-button {
-  background-color: transparent;
-  border: 2px solid #0069d9;
-  color: #0069d9;
-  padding: 10px 20px;
-  font-size: 1rem;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-bottom: 20px;
-}
+/* Responsive */
+@media (max-width: 768px) {
+  .resume-title {
+    font-size: 2rem;
+  }
 
-.back-button:hover {
-  background-color: #0069d9;
-  color: white;
+  .download-button {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
 }
-

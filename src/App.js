@@ -5,16 +5,17 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Footer from "./pages/Footer";
-import Resume from "./pages/Resume"; // Import your resume page
+import Resume from "./pages/Resume";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import ScrollToHashElement from "./components/ScrollToHashElement";
 
 const App = () => {
   return (
     <Router>
+      <ScrollToHashElement />
       <Navbar />
       <Routes>
-        {/* Main landing page with sections */}
         <Route
           path="/"
           element={
@@ -29,8 +30,6 @@ const App = () => {
             </>
           }
         />
-
-        {/* Resume route */}
         <Route path="/resume" element={<Resume />} />
       </Routes>
     </Router>
