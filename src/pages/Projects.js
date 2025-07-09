@@ -15,7 +15,7 @@ const Projects = () => {
           <Col md={6} lg={4} className="project-card">
             <ProjectCard
               videoPath={asteroidsVideo}
-              title="Asteroids Arcade Game"
+              title="☄️ Asteroids Arcade Game"
               description="Added features to Asteroids using OOP, dynamic memory, SFML, inheritance & polymorphism. Also helped 100+ students learn advanced C++ concepts as a TA."
               ghLink="https://github.com/ShaunRichter/Computers-In-Engineering/tree/main/hw7"
             />
