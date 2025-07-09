@@ -1,33 +1,38 @@
 .project-section {
-  .project-section {background: var(--bg-gradient);}
+  background: var(--bg-gradient);
   padding: 100px 0;
-  color: white;
+  color: var(--text-color);
   min-height: 100vh;
 }
 
 .project-heading {
   text-align: center;
   font-size: 2.8rem;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
   color: #ffffff;
   font-weight: 600;
 }
 
 .purple {
-  color: #c770f0;
+  color: var(--primary-color);
 }
 
 .project-card {
   margin-bottom: 40px;
 }
 
-.project-card-view {
-  background-color: #1c1c2b;
-  border: none;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(199, 112, 240, 0.2);
-  color: white;
+.project-card-view,
+.project-card-view.card {
+  background-color: var(--card-bg);
+  padding: 24px;
+  border-radius: 15px;
+  font-size: 1.2em;
+  line-height: 1.8;
+  color: var(--text-color);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
+  overflow: hidden;
+  border: none
 }
 
 .project-card-view:hover {
@@ -35,15 +40,19 @@
   box-shadow: 0 6px 20px rgba(199, 112, 240, 0.35);
 }
 
-.project-card-view .card-title {
-  font-size: 1.4rem;
-  font-weight: 500;
-  color: #ffffff;
+.project-card-view .card-body {
+  background: transparent
 }
 
-.project-card-view .card-text {
+.project-title {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.project-text {
   font-size: 1rem;
-  color: #dddddd;
+  color: var(--text-color);
   margin-top: 10px;
   min-height: 80px;
 }
@@ -56,4 +65,10 @@
 
 .github-button:hover {
   background-color: #843cd9;
+}
+
+.card-video {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 20px;
 }

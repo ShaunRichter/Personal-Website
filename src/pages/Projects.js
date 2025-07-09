@@ -1,40 +1,28 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "../components/ProjectCard";
-import "../styles/Projects.css"; // Ensure this path is correct
+import asteroidsVideo from "../assets/Asteroids_Recording.mp4";
+import "../styles/Projects.css";
 
 const Projects = () => {
   return (
-    <Container fluid className="project-section">
+    <section className="project-section" id="projects">
       <Container>
         <h1 className="project-heading">
           My <span className="purple">Projects</span>
         </h1>
         <Row className="justify-content-center">
-          <Col md={4} className="project-card">
+          <Col md={6} lg={4} className="project-card">
             <ProjectCard
-              title="Project One"
-              description="A short description of project one with key highlights and technologies used."
-              ghLink="https://github.com/yourusername/project-one"
-            />
-          </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              title="Project Two"
-              description="A short description of project two with relevant details."
-              ghLink="https://github.com/yourusername/project-two"
-            />
-          </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              title="Project Three"
-              description="An overview of project three and what it achieves."
-              ghLink="https://github.com/yourusername/project-three"
+              videoPath={asteroidsVideo}
+              title="Asteroids Arcade Game"
+              description="Added features to Asteroids using OOP, dynamic memory, SFML, inheritance & polymorphism. Also helped 100+ students learn advanced C++ concepts as a TA."
+              ghLink="https://github.com/ShaunRichter/Computers-In-Engineering/tree/main/hw7"
             />
           </Col>
         </Row>
       </Container>
-    </Container>
+    </section>
   );
 };
 
