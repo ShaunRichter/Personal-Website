@@ -7,6 +7,7 @@ import shardsVideo from "../assets/seltClipped.mp4"
 import commNetsImg from "../assets/commNets.png";
 import imageSegVideo from "../assets/Image_Seg.mp4";
 import geoGenieVideo from "../assets/GeoGenie.mp4"
+import tweetSentImg from "../assets/tweetSentimentAnalysis.png"
 import "../styles/Projects.css";
 
 const Projects = () => {
@@ -65,6 +66,14 @@ const Projects = () => {
               videoPath={geoGenieVideo}
               title="🌍 GeoGenie"
               description="An AI-powered assistant for GeoGuessr that uses the OpenAI API to detect game start, predict location from images, and narrate guesses using ElevenLabs text-to-speech. Combines computer vision, language models, and Google Maps to enhance gameplay with real-time location assistance."
+              ghLink="https://github.com/ShaunRichter/udp-messaging-protocol"
+            />
+          </Col>
+          <Col md={6} lg={4} className="project-card">
+            <ProjectCard
+              imgPath={tweetSentImg}
+              title="🐦TweetMood"
+              description="We built sentiment classifiers using traditional ML and fine-tuned LLMs (BERT, DistilBERT, GPT-2) on the Sentiment140 dataset to analyze tweet polarity."
               ghLink="https://github.com/ShaunRichter/udp-messaging-protocol"
             />
           </Col>
