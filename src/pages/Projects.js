@@ -50,7 +50,7 @@ const Projects = () => {
               imgPath={commNetsImg}
               title="📡 Comm Nets Protocol"
               description="Designed a secure and efficient messaging protocol over UDP for fast client-server communication. Features a lightweight handshake system, password protection, and custom packet headers to store and verify messages reliably."
-              ghLink="https://github.com/ShaunRichter/udp-messaging-protocol"
+              ghLink="https://github.com/ShaunRichter/Communication-Networks"
             />
           </Col>
 
@@ -59,7 +59,6 @@ const Projects = () => {
               videoPath={imageSegVideo}
               title="👁️🤖ML For Images"
               description="Built a real-time machine learning model to track pupil movement in eye images, enabling eye-based interaction with 99.5% segmentation accuracy at 60Hz. Designed for assistive communication and optimized for both speed and efficiency."
-              ghLink="https://github.com/ShaunRichter/udp-messaging-protocol"
             />
           </Col>
 
@@ -68,7 +67,7 @@ const Projects = () => {
               videoPath={geoGenieVideo}
               title="🌍 GeoGenie"
               description="An AI-powered assistant for GeoGuessr that uses the OpenAI API to detect game start, predict location from images, and narrate guesses using ElevenLabs text-to-speech. Combines computer vision, language models, and Google Maps to enhance gameplay with real-time location assistance."
-              ghLink="https://github.com/ShaunRichter/udp-messaging-protocol"
+              ghLink="https://github.com/ShaunRichter/GAIT-GeoGuessr"
             />
           </Col>
 
@@ -77,7 +76,6 @@ const Projects = () => {
               imgPath={tweetSentImg}
               title="🐦TweetMood"
               description="We built sentiment classifiers using traditional ML and fine-tuned LLMs (BERT, DistilBERT, GPT-2) on the Sentiment140 dataset to analyze tweet polarity."
-              ghLink="https://github.com/ShaunRichter/udp-messaging-protocol"
             />
           </Col>
         </Row>

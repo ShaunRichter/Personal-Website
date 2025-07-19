@@ -31,14 +31,16 @@ const ProjectCard = ({ imgPath, videoPath, title, description, ghLink }) => {
       <Card.Body className="d-flex flex-column">
         <Card.Title className="project-title">{title}</Card.Title>
         <Card.Text className="project-text flex-grow-1">{description}</Card.Text>
-        <Button
-          variant="primary"
-          href={ghLink}
-          target="_blank"
-          className="github-button mt-auto"
-        >
-          <BsGithub /> &nbsp; GitHub
-        </Button>
+        {ghLink && (
+          <Button
+            variant="primary"
+            href={ghLink}
+            target="_blank"
+            className="github-button mt-auto"
+          >
+            <BsGithub /> &nbsp; GitHub
+          </Button>
+        )}
       </Card.Body>
     </Card>
   );
