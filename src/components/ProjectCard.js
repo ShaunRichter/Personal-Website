@@ -7,21 +7,35 @@ const ProjectCard = ({ imgPath, videoPath, title, description, ghLink }) => {
   return (
     <Card className="project-card-view">
       {videoPath ? (
-        <video className="card-video" controls>
+        <video
+          className="card-video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          controls
+        >
           <source src={videoPath} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       ) : (
-        imgPath && <Card.Img variant="top" src={imgPath} alt={title} />
+        imgPath && (
+          <Card.Img
+            variant="top"
+            src={imgPath}
+            alt={title}
+            className="card-image"
+          />
+        )
       )}
-      <Card.Body>
+      <Card.Body className="d-flex flex-column">
         <Card.Title className="project-title">{title}</Card.Title>
-        <Card.Text className="project-text">{description}</Card.Text>
+        <Card.Text className="project-text flex-grow-1">{description}</Card.Text>
         <Button
           variant="primary"
           href={ghLink}
           target="_blank"
-          className="github-button"
+          className="github-button mt-auto"
         >
           <BsGithub /> &nbsp; GitHub
         </Button>

@@ -1,6 +1,6 @@
 .project-section {
   background: var(--bg-gradient);
-  padding: 100px 0;
+  padding: 20px 0;
   color: var(--text-color);
   min-height: 100vh;
 }
@@ -19,6 +19,7 @@
 
 .project-card {
   margin-bottom: 40px;
+  display: flex;
 }
 
 .project-card-view,
@@ -32,7 +33,10 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
   overflow: hidden;
-  border: none
+  border: none;
+  display: flex;
+  flex-direction: column;
+  height: auto; /* allow cards to grow with content */
 }
 
 .project-card-view:hover {
@@ -41,7 +45,10 @@
 }
 
 .project-card-view .card-body {
-  background: transparent
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .project-title {
@@ -54,7 +61,8 @@
   font-size: 1rem;
   color: var(--text-color);
   margin-top: 10px;
-  min-height: 80px;
+  flex-grow: 1;
+  min-height: 0; /* prevent cutoff */
 }
 
 .github-button {
@@ -67,8 +75,11 @@
   background-color: #843cd9;
 }
 
-.card-video {
+.card-video,
+.card-image {
   width: 100%;
+  height: 200px;
+  object-fit: cover;
   border-radius: 15px;
   margin-bottom: 20px;
 }

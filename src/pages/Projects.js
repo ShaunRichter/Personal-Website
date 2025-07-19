@@ -3,11 +3,11 @@ import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "../components/ProjectCard";
 import asteroidsVideo from "../assets/Asteroids_Recording.mp4";
 import drivesenseVideo from "../assets/drivesenseClipped.mp4";
-import shardsVideo from "../assets/seltClipped.mp4"
+import shardsVideo from "../assets/seltClipped.mp4";
 import commNetsImg from "../assets/commNets.png";
 import imageSegVideo from "../assets/Image_Seg.mp4";
-import geoGenieVideo from "../assets/GeoGenie.mp4"
-import tweetSentImg from "../assets/tweetSentimentAnalysis.png"
+import geoGenieVideo from "../assets/GeoGenie.mp4";
+import tweetSentImg from "../assets/tweetSentimentAnalysis.png";
 import "../styles/Projects.css";
 
 const Projects = () => {
@@ -18,7 +18,7 @@ const Projects = () => {
           My <span className="purple">Projects</span>
         </h1>
         <Row className="justify-content-center">
-          <Col md={6} lg={4} className="project-card">
+          <Col md={6} lg={4} className="project-card d-flex">
             <ProjectCard
               videoPath={asteroidsVideo}
               title="☄️ Asteroids Arcade Game"
@@ -27,7 +27,7 @@ const Projects = () => {
             />
           </Col>
 
-          <Col md={6} lg={4} className="project-card">
+          <Col md={6} lg={4} className="project-card d-flex">
             <ProjectCard
               videoPath={drivesenseVideo}
               title="🚗 DriveSense"
@@ -36,7 +36,7 @@ const Projects = () => {
             />
           </Col>
 
-          <Col md={6} lg={4} className="project-card">
+          <Col md={6} lg={4} className="project-card d-flex">
             <ProjectCard
               videoPath={shardsVideo}
               title="💎Shards of the Grid"
@@ -45,7 +45,7 @@ const Projects = () => {
             />
           </Col>
 
-          <Col md={6} lg={4} className="project-card">
+          <Col md={6} lg={4} className="project-card d-flex">
             <ProjectCard
               imgPath={commNetsImg}
               title="📡 Comm Nets Protocol"
@@ -53,7 +53,8 @@ const Projects = () => {
               ghLink="https://github.com/ShaunRichter/udp-messaging-protocol"
             />
           </Col>
-          <Col md={6} lg={4} className="project-card">
+
+          <Col md={6} lg={4} className="project-card d-flex">
             <ProjectCard
               videoPath={imageSegVideo}
               title="👁️🤖ML For Images"
@@ -61,7 +62,8 @@ const Projects = () => {
               ghLink="https://github.com/ShaunRichter/udp-messaging-protocol"
             />
           </Col>
-          <Col md={6} lg={4} className="project-card">
+
+          <Col md={6} lg={4} className="project-card d-flex">
             <ProjectCard
               videoPath={geoGenieVideo}
               title="🌍 GeoGenie"
@@ -69,7 +71,8 @@ const Projects = () => {
               ghLink="https://github.com/ShaunRichter/udp-messaging-protocol"
             />
           </Col>
-          <Col md={6} lg={4} className="project-card">
+
+          <Col md={6} lg={4} className="project-card d-flex">
             <ProjectCard
               imgPath={tweetSentImg}
               title="🐦TweetMood"
