@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/Personal-Website/static/css/main.41d488ce.css",
+    "main.js": "/Personal-Website/static/js/main.1376228c.js",
+    "static/media/Asteroids_Recording.mp4": "/Personal-Website/static/media/Asteroids_Recording.5e555aef4053eca4e2d7.mp4",
+    "static/media/GeoGenie.mp4": "/Personal-Website/static/media/GeoGenie.b56f770669449b547865.mp4",
+    "static/media/seltClipped.mp4": "/Personal-Website/static/media/seltClipped.1e21b1b285e5a5106334.mp4",
+    "static/media/drivesenseClipped.mp4": "/Personal-Website/static/media/drivesenseClipped.482cf3214548214fb7a0.mp4",
+    "static/media/Image_Seg.mp4": "/Personal-Website/static/media/Image_Seg.e47dbcad750e94862f48.mp4",
+    "static/media/pdf.worker.mjs": "/Personal-Website/static/media/pdf.worker.dcc76dd394216c41764f.mjs",
+    "static/media/self-portrait.jpg": "/Personal-Website/static/media/self-portrait.517c3e412236cdb4212f.jpg",
+    "static/media/commNets.png": "/Personal-Website/static/media/commNets.6fd0331d4c51c0883422.png",
+    "static/media/tweetSentimentAnalysis.png": "/Personal-Website/static/media/tweetSentimentAnalysis.65af4e01ce07db8ebb68.png",
+    "static/media/resume.pdf": "/Personal-Website/static/media/resume.cbbc6a96e895d4c7000b.pdf",
+    "static/media/software-engineer.svg": "/Personal-Website/static/media/software-engineer.620a06d69f23e45f9064f888fcd7722b.svg",
+    "static/media/resume.svg": "/Personal-Website/static/media/resume.47066c0b31b025113b738f4e71109a83.svg",
+    "index.html": "/Personal-Website/index.html",
+    "static/media/gmail.svg": "/Personal-Website/static/media/gmail.5f93003b135e241b018af7d37cf22723.svg",
+    "main.41d488ce.css.map": "/Personal-Website/static/css/main.41d488ce.css.map",
+    "main.1376228c.js.map": "/Personal-Website/static/js/main.1376228c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.41d488ce.css",
+    "static/js/main.1376228c.js"
+  ]
+}
