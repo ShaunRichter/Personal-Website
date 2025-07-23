@@ -12,7 +12,7 @@ import ScrollToHashElement from "./components/ScrollToHashElement";
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/">
       <ScrollToHashElement />
       <Navbar />
       <Routes>
