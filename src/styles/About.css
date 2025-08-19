@@ -27,17 +27,21 @@
   align-items: center;
 }
 
+/* Make the wrapper a consistent circle and let the image fill it */
 .about-image {
-  text-align: center;
+  width: 440px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .portrait-img {
-  width: 440px;
-  height: 440px;
-  max-width: 100%;
-  border-radius: 50%; /* Make the image circular */
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  display: block;
 }
 
 .about-text {
@@ -76,52 +80,16 @@
   justify-content: center;
   align-items: center;
   transition: transform 0.2s ease;
-}
-
-.skill-tile:hover {
-  transform: scale(1.1);
-}
-
-.skill-tile i {
-  font-size: 3rem;
-}
-
-.custom-icon {
-  width: 48px;
-  height: 48px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .about-grid {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .about-text {
-    margin-top: 20px;
-    font-size: 1.1em;
-    padding: 20px;
-  }
-
-  .portrait-img {
-    max-width: 70%;
-  }
-
-  .about-heading {
-    font-size: 2.2em;
-  }
-
-  .skills-heading {
-    font-size: 2em;
-  }
-}
-
-.skill-tile {
   position: relative;
   cursor: pointer;
 }
 
+.skill-tile:hover { transform: scale(1.1); }
+
+.skill-tile i { font-size: 3rem; }
+.custom-icon { width: 48px; height: 48px; }
+
+/* Tooltips */
 .skill-tile::after {
   content: attr(data-tooltip);
   position: absolute;
@@ -139,7 +107,31 @@
   transition: opacity 0.2s ease;
   z-index: 10;
 }
+.skill-tile:hover::after { opacity: 1; }
 
-.skill-tile:hover::after {
-  opacity: 1;
+/* Responsive */
+@media (max-width: 992px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-heading { font-size: 2.2em; }
+  .skills-heading { font-size: 2em; }
+
+  /* Smaller, responsive circle avatar on phones */
+  .about-image {
+    width: min(70vw, 320px);
+    aspect-ratio: 1 / 1;
+    margin: 0 auto;
+  }
+
+  .about-text {
+    margin-top: 8px;
+    font-size: 1.06em;
+    padding: 18px;
+  }
 }
