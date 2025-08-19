@@ -21,22 +21,22 @@ const Home = () => {
 
               <h1 className="name-heading">
                 I'M <strong className="main-name">SHAUN RICHTER</strong>
-                <span className="home-social-links-inline">
-                  <a
-                    href="https://www.linkedin.com/in/shaun-richter-a90b412b6/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FaLinkedin className="social-icon linkedin" />
-                  </a>
-                  <a
-                    href="https://github.com/ShaunRichter"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FaGithub className="social-icon github" />
-                  </a>
-                </span>
+                <a
+                  href="https://www.linkedin.com/in/shaun-richter-a90b412b6/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="social-icon-link"
+                >
+                  <FaLinkedin className="social-icon linkedin" />
+                </a>
+                <a
+                  href="https://github.com/ShaunRichter"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="social-icon-link"
+                >
+                  <FaGithub className="social-icon github" />
+                </a>
               </h1>
 
               <Type />
