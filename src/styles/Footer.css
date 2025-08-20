@@ -111,22 +111,67 @@
 }
 
 @media (max-width: 768px) {
+  .contact-section {
+    padding: 32px 0 48px 0;
+    background: linear-gradient(180deg, #1e293b 80%, #0f172a 100%);
+  }
+  .contact-container {
+    padding: 0 0.2rem;
+  }
   .contact-heading {
-    font-size: 2.2rem;
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    text-align: center;
+    letter-spacing: 0.5px;
   }
-
-  .contact-icon,
-  .gmail-icon {
-    width: 36px;
-    height: 36px;
+  .contact-left, .resume-right {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 24px;
+    padding: 0;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
   }
-
+  .contact-icons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  .contact-icon, .gmail-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 2.3rem;
+    margin: 0 10px;
+    border-radius: 50%;
+    background: #0f172a;
+    box-shadow: 0 1px 6px 0 rgba(0,0,0,0.10);
+    padding: 8px;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .contact-icon:active, .gmail-icon:active {
+    background: #334155;
+    transform: scale(1.08);
+  }
   .tooltip-text {
     font-size: 0.8rem;
   }
-
   .resume-svg {
-    width: 50px;
+    width: 54px;
+    height: 44px;
+    margin-top: 8px;
+  }
+  .resume-link {
+    margin-top: 8px;
+  }
+  .contact-section .row {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
   }
 }
 
