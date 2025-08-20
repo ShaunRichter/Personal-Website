@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.41d488ce.css",
-    "main.js": "/static/js/main.f9dc8446.js",
+    "main.css": "/static/css/main.53bd9fae.css",
+    "main.js": "/static/js/main.5a58c733.js",
     "static/media/Asteroids_Recording.mp4": "/static/media/Asteroids_Recording.5e555aef4053eca4e2d7.mp4",
     "static/media/GeoGenie.mp4": "/static/media/GeoGenie.b56f770669449b547865.mp4",
     "static/media/seltClipped.mp4": "/static/media/seltClipped.1e21b1b285e5a5106334.mp4",
@@ -16,11 +16,11 @@
     "static/media/resume.svg": "/static/media/resume.47066c0b31b025113b738f4e71109a83.svg",
     "index.html": "/index.html",
     "static/media/gmail.svg": "/static/media/gmail.cf6e9da6207069eaa596237538127bcb.svg",
-    "main.41d488ce.css.map": "/static/css/main.41d488ce.css.map",
-    "main.f9dc8446.js.map": "/static/js/main.f9dc8446.js.map"
+    "main.53bd9fae.css.map": "/static/css/main.53bd9fae.css.map",
+    "main.5a58c733.js.map": "/static/js/main.5a58c733.js.map"
   },
   "entrypoints": [
-    "static/css/main.41d488ce.css",
-    "static/js/main.f9dc8446.js"
+    "static/css/main.53bd9fae.css",
+    "static/js/main.5a58c733.js"
   ]
 }
