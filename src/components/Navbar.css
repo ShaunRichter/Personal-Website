@@ -186,6 +186,10 @@
     box-shadow: 4px 0 24px rgba(0,0,0,0.18);
   }
 
+  .mobile-links.centered-links {
+    margin-top: -100px;
+  }
+
   .mobile-menu.drawer.open {
     transform: translateX(0);
     opacity: 1;
